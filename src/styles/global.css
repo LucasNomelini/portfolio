@@ -1069,3 +1069,39 @@ html {
     border-color: transparent;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .navbar ul {
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+  }
+
+  .logo {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero::before {
+    font-size: 6rem;
+
+    letter-spacing: 6px;
+  }
+}
