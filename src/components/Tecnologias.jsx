@@ -8,6 +8,10 @@ export default function Tecnologias() {
     "PHP",
     "Python",
     "Git",
+    "GitHub",
+    "REST APIs",
+    "Vite",
+    "Figma",
   ];
 
   return (

@@ -1,10 +1,13 @@
+import { useState } from "react";
+
 export default function ModalProjeto({
   aberto,
   fechar,
   projeto,
 }) {
-  // Se o modal estiver fechado
-  // não renderiza nada
+
+  const [zoom, setZoom] = useState(false);
+  
   if (!aberto || !projeto) {
     return null;
   }
@@ -29,31 +32,64 @@ export default function ModalProjeto({
 
         <h2>{projeto.titulo}</h2>
 
-        <p>{projeto.descricao}</p>
-
-        <h3>Tecnologias</h3>
-
-        <ul>
+        <div className="modal-techs">
           {projeto.tecnologias.map(
             (tech) => (
-              <li key={tech}>
+              <span
+                key={tech}
+                className="tech-badge"
+              >
                 {tech}
-              </li>
+              </span>
             )
           )}
-        </ul>
+        </div>
 
-        <h3>Desafios Resolvidos</h3>
+        <img
+            className={`modal-image ${
+              zoom ? "zoomed" : ""
+            }`}
+            src={projeto.imagem}
+            alt={projeto.titulo}
+            onClick={() => setZoom(!zoom)}
+          />  
 
-        <ul>
-          {projeto.desafios.map(
-            (item) => (
-              <li key={item}>
-                {item}
-              </li>
-            )
-          )}
-        </ul>
+        <p className="modal-descricao">
+          {projeto.descricao}
+        </p>
+
+        <div className="info-grid">
+
+          <div className="info-card">
+            <h3>Funcionalidades</h3>
+
+            <ul>
+              {projeto.funcionalidades?.map(
+                (item) => (
+                  <li key={item}>
+                    ✅ {item}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+          <div className="info-card">
+            <h3>Desafios Resolvidos</h3>
+
+            <ul>
+              {projeto.desafios.map(
+                (item) => (
+                  <li key={item}>
+                    ✅ {item}
+                  </li>
+                )
+              )}
+            </ul>
+          </div>
+
+        </div>
+
       </div>
     </div>
   );

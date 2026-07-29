@@ -5,23 +5,19 @@ export default function Sobre() {
       <h2>Sobre Mim</h2>
 
       <p>
-        Atualmente atuo na área
-        administrativa e estou em
-        transição para tecnologia.
+  Atualmente atuo na área administrativa, mas minha
+  vocação está na construção de soluções tecnológicas.
 
-        Desenvolvo aplicações web
-        utilizando React, Firebase,
-        Firestore e outras tecnologias,
-        sempre focado em resolver
-        problemas reais através
-        de sistemas de gestão,
-        automação e controle de dados.
-
-        Meu objetivo é atuar como
-        Desenvolvedor Full Stack
-        ou Analista de Sistemas
-        com perfil técnico.
-      </p>
+  Nos últimos anos venho desenvolvendo aplicações web
+  voltadas para problemas reais, criando sistemas de
+  gestão financeira, controle de agendamentos e
+  plataformas de administração de negócios.
+    <br></br>
+  Meu objetivo é ingressar como Desenvolvedor Full Stack
+  ou Analista de Sistemas, unindo visão de negócio,
+  experiência prática e desenvolvimento de software para
+  criar soluções que gerem valor para pessoas e empresas.
+</p>
 
     </section>
   );

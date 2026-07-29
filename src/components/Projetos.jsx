@@ -2,6 +2,14 @@ import { useState } from "react";
 
 import ProjetoCard from "./ProjetoCard";
 import ModalProjeto from "./ModalProjeto";
+import financeiroImg from "../assets/projetos/financeiro-dashboard.png";
+import manicureImg from "../assets/projetos/manicure-relatorios.png";
+import confeitariaImg from "../assets/projetos/confeitaria-home.png";
+import {
+  Wallet,
+  CalendarDays,
+  Store
+} from "lucide-react";
 
 export default function Projetos() {
 
@@ -10,8 +18,8 @@ export default function Projetos() {
 
   const projetos = [
     {
-      titulo: "Sistema Financeiro",
-      icone: "💰",
+      titulo: "Plataforma de Gestão Financeira",
+      imagem: financeiroImg,
 
       descricao:
         "Controle financeiro completo com dashboard, investimentos e gestão de empréstimos.",
@@ -20,6 +28,7 @@ export default function Projetos() {
         "React",
         "Firebase",
         "Firestore",
+        "JavaScript",
       ],
 
       desafios: [
@@ -27,12 +36,19 @@ export default function Projetos() {
         "Dashboard consolidado",
         "Gestão financeira compartilhada",
       ],
+
+      funcionalidades: [
+        "Dashboard Financeiro",
+        "Gestão de Investimentos",
+        "Gestão de Empréstimos",
+        "Controle Compartilhado",
+        "Relatórios Mensais",
+      ],
     },
 
     {
       titulo: "Sistema de Agendamento",
-
-      icone: "💅",
+      imagem: manicureImg,
 
       descricao:
         "Gestão de agendamentos e controle financeiro.",
@@ -40,30 +56,47 @@ export default function Projetos() {
       tecnologias: [
         "React",
         "Firebase",
+        "JavaScript",
       ],
 
       desafios: [
         "Controle de horários",
         "Cadastro de clientes",
       ],
+
+      funcionalidades: [
+        "Agendamentos",
+        "Controle Financeiro",
+        "Relatórios",
+        "Controle de Gastos",
+        "Ticket Médio",
+      ],
     },
 
     {
       titulo: "Cardápio Digital",
-
-      icone: "🍔",
+      imagem: confeitariaImg,
 
       descricao:
-        "Cardápio online com área administrativa.",
+        "Cardápio online com login, senha e área administrativa.",
 
       tecnologias: [
         "React",
         "Firebase",
+        "JavaScript",
       ],
 
       desafios: [
         "Login administrativo",
         "Gestão de produtos",
+      ],
+
+      funcionalidades: [
+        "Cardápio Online",
+        "Área Administrativa",
+        "Cadastro de Produtos",
+        "Integração WhatsApp",
+        "Gestão de Catálogo",
       ],
     },
   ];
@@ -78,9 +111,10 @@ export default function Projetos() {
         {projetos.map((projeto) => (
 
           <ProjetoCard
+            imagem={projeto.imagem}
             key={projeto.titulo}
-            icone={projeto.icone}
             titulo={projeto.titulo}
+            tecnologias={projeto.tecnologias}
             descricao={projeto.descricao}
 
             onClick={() =>

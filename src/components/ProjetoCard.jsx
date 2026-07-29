@@ -1,17 +1,24 @@
 export default function ProjetoCard({
-  icone,
   titulo,
   descricao,
+  tecnologias,
   onClick,
 }) {
   return (
     <div className="projeto-card">
 
-      <div className="projeto-icone">
-        {icone}
-      </div>
-
       <h3>{titulo}</h3>
+
+        <div className="projeto-techs">
+          {tecnologias.map((tech) => (
+            <span
+              key={tech}
+              className="card-tech"
+              >
+                {tech}
+          </span>
+          ))}
+        </div>
 
       <p>{descricao}</p>
 

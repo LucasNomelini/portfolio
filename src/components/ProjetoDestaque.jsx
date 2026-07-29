@@ -24,7 +24,7 @@ export default function ProjetoDestaque() {
         </div>
 
         <div className="feature-card">
-          ❤️ Controle do Casal
+          📋 Controle de despesas
         </div>
 
         <div className="feature-card">
@@ -33,14 +33,6 @@ export default function ProjetoDestaque() {
 
         <div className="feature-card">
           💵 Gestão de Empréstimos
-        </div>
-
-        <div className="feature-card">
-          🔥 Firebase
-        </div>
-
-        <div className="feature-card">
-          ⚛ React
         </div>
 
       </div>
