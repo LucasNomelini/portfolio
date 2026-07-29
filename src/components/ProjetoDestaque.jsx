@@ -1,0 +1,50 @@
+export default function ProjetoDestaque() {
+  return (
+    <section className="projeto-destaque">
+
+      <div className="badge">
+        🚀 Projeto Principal
+      </div>
+
+      <h2>
+        Sistema Financeiro Completo
+      </h2>
+
+      <p>
+        Sistema desenvolvido para controle
+        financeiro pessoal, investimentos,
+        empréstimos, despesas compartilhadas
+        e dashboards gerenciais.
+      </p>
+
+      <div className="projeto-grid">
+
+        <div className="feature-card">
+          💰 Investimentos
+        </div>
+
+        <div className="feature-card">
+          ❤️ Controle do Casal
+        </div>
+
+        <div className="feature-card">
+          📊 Dashboard
+        </div>
+
+        <div className="feature-card">
+          💵 Gestão de Empréstimos
+        </div>
+
+        <div className="feature-card">
+          🔥 Firebase
+        </div>
+
+        <div className="feature-card">
+          ⚛ React
+        </div>
+
+      </div>
+
+    </section>
+  );
+}
